@@ -4,17 +4,20 @@
    ========================================================================== */
 
 :root {
-  --ink: #0a0a0a;
-  --ink-soft: #1a1a1a;
-  --bone: #f4f1ea;
-  --bone-soft: #ebe7dd;
-  --paper: #fafaf7;
-  --rule: #2a2a2a;
-  --rule-light: #d6d1c4;
-  --accent: #ff4d2e;
-  --accent-deep: #d93a1e;
-  --muted: #6b6b6b;
-  --muted-light: #a8a8a8;
+  /* Earthy palette: terracotta accent, deep olive for dark sections, warm cream backgrounds */
+  --ink: #2a241e;          /* deep charcoal-brown, softer than black */
+  --ink-soft: #3d342b;     /* slightly lighter brown for body text */
+  --bone: #f5efe1;         /* warm cream — main background */
+  --bone-soft: #ece4d2;    /* slightly deeper cream */
+  --paper: #faf6ec;        /* lightest cream — for cards */
+  --rule: #4a3f33;         /* dark brown rule for dark sections */
+  --rule-light: #d4c8b3;   /* soft olive-cream rule */
+  --accent: #c8553d;       /* terracotta — the star */
+  --accent-deep: #a83e29;  /* deeper terracotta for hover/text */
+  --olive: #5a5a3d;        /* deep olive — for dark contact section */
+  --olive-deep: #3d3d28;   /* deepest olive */
+  --muted: #7a6f5f;        /* warm muted brown */
+  --muted-light: #b8ad9a;  /* light muted on dark backgrounds */
 
   --serif: 'Fraunces', 'Times New Roman', serif;
   --sans: 'Inter', system-ui, sans-serif;
@@ -67,8 +70,22 @@ em { font-style: italic; }
   font-size: 22px;
   letter-spacing: -0.02em;
   display: flex;
-  align-items: baseline;
-  gap: 2px;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-mark:hover .nav-avatar {
+  transform: scale(1.05);
+  border-color: var(--accent-deep);
 }
 
 .nav-mark .dot {
@@ -269,7 +286,7 @@ em { font-style: italic; }
 
 /* ============== STRIP ============== */
 .strip {
-  background: var(--ink);
+  background: var(--olive-deep);
   color: var(--bone);
   padding: clamp(80px, 10vw, 140px) 0;
 }
@@ -621,7 +638,7 @@ em { font-style: italic; }
 
 /* ============== CONTACT ============== */
 .contact {
-  background: var(--ink);
+  background: var(--olive-deep);
   color: var(--bone);
   padding: clamp(120px, 14vw, 200px) var(--gutter);
   position: relative;
@@ -711,7 +728,7 @@ em { font-style: italic; }
 
 /* ============== FOOTER ============== */
 .footer {
-  background: var(--ink);
+  background: var(--olive-deep);
   color: var(--muted-light);
   border-top: 1px solid var(--rule);
   padding: 32px 0;
