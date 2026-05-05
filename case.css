@@ -1,0 +1,284 @@
+/* ==========================================================================
+   CASE STUDY PAGES — extends styles.css
+   ========================================================================== */
+
+.case {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: clamp(60px, 10vw, 120px) var(--gutter) 60px;
+}
+
+.case-hero {
+  margin-bottom: clamp(80px, 10vw, 140px);
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--rule-light);
+}
+
+.back-link {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: inline-block;
+  margin-bottom: 60px;
+  transition: color 0.2s;
+}
+
+.back-link:hover { color: var(--accent); }
+
+.case-kicker {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 32px;
+}
+
+.case-h1 {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+}
+
+.case-h1 em {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.case-subtitle {
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.45;
+  color: var(--ink-soft);
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+
+.case-spec {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--rule-light);
+}
+
+.case-spec > div {
+  border-left: 1px solid var(--rule-light);
+  padding-left: 16px;
+}
+
+.case-spec > div:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.case-spec dt {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.case-spec dd {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* CASE SECTIONS */
+.case-section {
+  margin-bottom: clamp(60px, 8vw, 100px);
+}
+
+.case-section-head {
+  margin-bottom: 32px;
+}
+
+.case-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.case-section-head h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.case-body p {
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: var(--ink-soft);
+}
+
+.case-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  border-top: 1px solid var(--rule-light);
+}
+
+.case-bullets li {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule-light);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.case-bullets strong {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 17px;
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--ink);
+}
+
+/* PLACEHOLDER NOTES */
+.case-placeholder-note {
+  background: rgba(255, 77, 46, 0.08);
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--accent-deep);
+  font-style: normal;
+  margin-bottom: 24px;
+}
+
+/* ARTIFACTS */
+.case-artifact {
+  margin: 32px 0;
+}
+
+.artifact-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.artifact-placeholder {
+  background: var(--paper);
+  border: 1px dashed var(--rule-light);
+  padding: 60px 40px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* METRICS */
+.case-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.metric {
+  background: var(--paper);
+  border: 1px solid var(--rule-light);
+  padding: 24px;
+  position: relative;
+}
+
+.metric::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.metric-num {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.metric-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* NEXT NAV */
+.case-next {
+  margin-top: clamp(80px, 10vw, 140px);
+  padding-top: 40px;
+  border-top: 1px solid var(--rule-light);
+}
+
+.next-link {
+  display: block;
+  padding: 32px;
+  background: var(--ink);
+  color: var(--bone);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.next-link:hover {
+  background: var(--accent);
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.next-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-light);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.next-link:hover .next-label {
+  color: var(--ink);
+}
+
+.next-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(22px, 2.5vw, 32px);
+  letter-spacing: -0.02em;
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 720px) {
+  .case-spec {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .case-metrics {
+    grid-template-columns: 1fr;
+  }
+}
