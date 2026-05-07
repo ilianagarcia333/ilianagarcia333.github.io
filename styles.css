@@ -4,20 +4,21 @@
    ========================================================================== */
 
 :root {
-  /* Earthy palette: terracotta accent, deep olive for dark sections, warm cream backgrounds */
-  --ink: #2a241e;          /* deep charcoal-brown, softer than black */
-  --ink-soft: #3d342b;     /* slightly lighter brown for body text */
-  --bone: #f5efe1;         /* warm cream — main background */
-  --bone-soft: #ece4d2;    /* slightly deeper cream */
-  --paper: #faf6ec;        /* lightest cream — for cards */
-  --rule: #4a3f33;         /* dark brown rule for dark sections */
-  --rule-light: #d4c8b3;   /* soft olive-cream rule */
-  --accent: #c8553d;       /* terracotta — the star */
-  --accent-deep: #a83e29;  /* deeper terracotta for hover/text */
-  --olive: #5a5a3d;        /* deep olive — for dark contact section */
-  --olive-deep: #3d3d28;   /* deepest olive */
-  --muted: #7a6f5f;        /* warm muted brown */
-  --muted-light: #b8ad9a;  /* light muted on dark backgrounds */
+  /* Plum + sage + warm off-white palette */
+  --ink: #1f1a1f;          /* near-black with plum warmth */
+  --ink-soft: #3a323a;     /* warm dark for body text */
+  --bone: #f6f3ec;         /* warm off-white background */
+  --bone-soft: #ece8dc;    /* slightly deeper off-white */
+  --paper: #fbf8f1;        /* lightest off-white for cards */
+  --rule: #4a3d48;         /* dark plum-tinted rule for dark sections */
+  --rule-light: #d8d2c4;   /* soft warm rule */
+  --accent: #6b3a5c;       /* deep plum — the star */
+  --accent-deep: #4f2944;  /* darker plum for hover/text */
+  --olive: #8a9b7a;        /* sage green — secondary accent */
+  --olive-deep: #2a1a26;   /* deepest plum for dark sections */
+  --sage-deep: #6b7d5d;    /* deeper sage for accents on dark backgrounds */
+  --muted: #7a6e7a;        /* warm muted plum-grey */
+  --muted-light: #b8aeb6;  /* light muted on dark backgrounds */
 
   --serif: 'Fraunces', 'Times New Roman', serif;
   --sans: 'Inter', system-ui, sans-serif;
@@ -303,13 +304,13 @@ em { font-style: italic; }
 .strip-block {
   position: relative;
   padding-top: 28px;
-  border-top: 1px solid var(--accent);
+  border-top: 1px solid var(--olive);
 }
 
 .strip-num {
   font-family: var(--mono);
   font-size: 12px;
-  color: var(--accent);
+  color: var(--olive);
   letter-spacing: 0.1em;
   display: block;
   margin-bottom: 16px;
@@ -588,6 +589,184 @@ em { font-style: italic; }
   font-family: var(--mono);
   font-size: 11px;
   color: var(--muted);
+}
+
+/* ============== EARLIER WORK ============== */
+.earlier {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: clamp(100px, 12vw, 160px) var(--gutter);
+}
+
+.earlier-arc {
+  margin-bottom: 60px;
+  padding: 32px;
+  background: var(--paper);
+  border: 1px solid var(--rule-light);
+  border-left: 3px solid var(--accent);
+}
+
+.arc-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.arc-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.arc-divider {
+  flex: 1;
+  height: 1px;
+  background: var(--rule-light);
+  min-width: 20px;
+  max-width: 60px;
+}
+
+.arc-company {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.arc-progression {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.arc-step {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 18px;
+  background: var(--bone);
+  border: 1px solid var(--rule-light);
+  flex: 1;
+  min-width: 180px;
+}
+
+.arc-step-current {
+  background: var(--olive-deep);
+  color: var(--bone);
+  border-color: var(--olive-deep);
+}
+
+.arc-year {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.arc-step-current .arc-year {
+  color: var(--accent);
+}
+
+.arc-role {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+
+.arc-scope {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted-light);
+  margin-top: 4px;
+}
+
+.arc-arrow {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.earlier-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.earlier-card {
+  background: var(--paper);
+  border: 1px solid var(--rule-light);
+  padding: 32px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.earlier-card:hover {
+  border-color: var(--accent);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--rule-light);
+}
+
+.earlier-card-feature {
+  grid-column: 1 / -1;
+  background: var(--bone);
+  border: 2px solid var(--accent);
+  position: relative;
+}
+
+.earlier-card-feature::before {
+  content: '★';
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.earlier-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--accent-deep);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.earlier-card h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+.earlier-card p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+
+.earlier-card p:last-child {
+  margin-bottom: 0;
+}
+
+.earlier-coda {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 14px !important;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule-light);
+  margin-top: 8px;
 }
 
 /* ============== ABOUT ============== */
